@@ -10,7 +10,7 @@ import {
 export const Products = () => (
   <ProductList>
     <ProductEntry>
-      <ProductImage>Mynd av seyðarhøvdi</ProductImage>
+      <ProductImage src='https://i.pinimg.com/originals/cd/0d/cf/cd0dcfff2fe57e3e2766871c64c56151.jpg' />
       <ProductName>Seyðarhøvd</ProductName>
       <ProductPrice>25 kr</ProductPrice>
     </ProductEntry>
