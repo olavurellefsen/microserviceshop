@@ -1,14 +1,17 @@
 import React from 'react';
-import { Container, StoreName, MenuContainer, MenuItem } from './Product.style';
+import { Container, StoreName, MenuContainer, MenuItem } from './Header.style';
 
 export const Header = () =>
     <Container>
-        <StoreName>
+        <StoreName href='/'>
             MicroserviceShop
         </StoreName>
         <MenuContainer>
-            <MenuItem>
+            <MenuItem href='/products'>
                 Products
+            </MenuItem>
+            <MenuItem href='/login'>
+                Login
             </MenuItem>
         </MenuContainer>
     </Container>

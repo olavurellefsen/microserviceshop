@@ -4,6 +4,7 @@ export const ProductList = styled.div`
     display: flex;
     flex-direction: column;
     padding: 10px;
+    color: lightgray;
 `;
 
 export const ProductEntry = styled.div`
@@ -14,9 +15,10 @@ export const ProductImage = styled.img`
 `;
 
 export const ProductName = styled.div`
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     padding-bottom: 10px;
+    color: white;
 `;
 
 export const ProductDescription = styled.div`

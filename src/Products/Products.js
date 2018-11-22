@@ -21,7 +21,7 @@ class Products extends Component {
     return (
       <ProductList>
         {products.filter(product => product.id<10).map(product => {
-          const imageurl = 'https://picsum.photos/300/200?image='+(product.id+100);
+          const imageurl = 'https://picsum.photos/300/200?image='+(product.id+106);
           return(
             <ProductEntry key={product.id}>
               <ProductName>{product.name}</ProductName>

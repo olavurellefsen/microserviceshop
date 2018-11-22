@@ -1,4 +1,4 @@
-import React, { Text, Component } from 'react';
+import React, { Component } from 'react';
 
 class Login extends Component {
   constructor(props) {
@@ -18,11 +18,9 @@ handleLogon(text)
 render() {
   return (
     <div className="shopping-list">
-        
         <ul>
-          <li>Instagram</li>
-          <li>WhatsApp</li>
-          <li>Oculus</li>
+          <li>User name:</li>
+          <li>Password:</li>
         </ul>
       </div>
   )
@@ -37,22 +35,20 @@ login()
     obj.password= this.state.password;
    
     fetch("http://35.197.240.22/api/getToken",
-{
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    method: "POST",
-    body: JSON.stringify(obj)
-})
-.then(function(res){ 
-  
-  console.log(res) 
-
-
-})
-.catch(function(res){ console.log(res) })
-
+    {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: "POST",
+      body: JSON.stringify(obj)
+    })
+    .then(function(res){ 
+      console.log(res) 
+    })
+    .catch(function(res){
+      console.log(res)
+    })
   }
 }
 
