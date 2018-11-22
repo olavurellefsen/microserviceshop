@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const LoginBody = styled.div`
-    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
 `;
 
 export const LoginForm = styled.div`
@@ -34,12 +34,6 @@ export const LoginButton = styled.button`
     }
 `;
 
-export const CancelButton = styled.button`
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-`;
-
-export const Container = styled.button`
+export const Container = styled.div`
     padding: 16px;
 `
