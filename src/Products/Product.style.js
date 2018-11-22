@@ -1,17 +1,21 @@
 import styled from 'styled-components';
 
 export const ProductList = styled.div`
+    display: flex;
+    flex-direction: column;
 `;
 
-export const ProductEntry = styled.li`
-`;
-
-export const ProductImage = styled.img`
-    width: 200px;
+export const ProductEntry = styled.div`
 `;
 
 export const ProductName = styled.div`
 `;
 
-export const ProductPrice = styled.div`
+export const ProductDescription = styled.div`
+`;
+
+export const ProductCost = styled.div`
+`;
+
+export const ProductBitcoinAddress = styled.div`
 `;

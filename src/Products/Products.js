@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { ProductList, ProductEntry, ProductImage, ProductName, ProductPrice } from './Product.style';
+import { ProductList, ProductEntry, ProductName, ProductDescription, ProductCost, ProductBitcoinAddress } from './Product.style';
+import products2 from '../data/sampleproducts';
 
 class Products extends Component {
   constructor(props) {
@@ -17,12 +18,15 @@ class Products extends Component {
   }
 
   render() {
-    const { products } = this.state;
+    //const { products } = this.state;
     return (
       <ProductList>
-        {products.map(product =>
+        {products2.map(product =>
           <ProductEntry key={product.id}>
             <ProductName>{product.name}</ProductName>
+            <ProductDescription>{product.description}</ProductDescription>
+            <ProductCost>{product.cost}</ProductCost>
+            <ProductBitcoinAddress>{product.bitCoinAddress}</ProductBitcoinAddress>
           </ProductEntry>
         )}
       </ProductList>
