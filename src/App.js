@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Products from "./Products/Products";
 import Login from "./Login/Login";
 import { Header } from "./Header/Header";
-// import { Basket } from "./Basket/Basket";
 import Basket from "./Basket/Basket";
 
 import "./App.css";
@@ -12,7 +11,7 @@ import styled from "styled-components";
 const Body = styled.div`
   background-image: url("/background.jpg");
   background-repeat: repeat-y;
-  height: 100%;
+  min-height: 100vh;
 `;
 const MainArea = styled.div``;
 
