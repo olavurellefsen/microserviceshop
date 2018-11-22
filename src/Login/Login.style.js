@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const LoginBody = styled.div`
+    margin: 10px;
 `;
 
 export const LoginForm = styled.div`
