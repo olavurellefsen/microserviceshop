@@ -1,18 +1,20 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Products from './Products/Products'
-import Login from './Login/Login'
-import { Header } from './Header/Header'
-import './App.css';
-import styled from 'styled-components';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Products from "./Products/Products";
+import Login from "./Login/Login";
+import { Header } from "./Header/Header";
+// import { Basket } from "./Basket/Basket";
+import Basket from "./Basket/Basket";
+
+import "./App.css";
+import styled from "styled-components";
 
 const Body = styled.div`
   background-image: url("/background.jpg");
   background-repeat: repeat-y;
-  height:100%;
+  height: 100%;
 `;
-const MainArea = styled.div`
-`;
+const MainArea = styled.div``;
 
 class App extends Component {
   render() {
@@ -22,15 +24,10 @@ class App extends Component {
           <Header />
           <MainArea>
             <Switch>
-            <Route exact path="/" render={() =>
-              <Products /> 
-            }/>
-            <Route path="/products" render={() => 
-              <Products />
-            } />
-            <Route path="/login" render={() => 
-              <Login />
-            } />            
+              <Route exact path="/" render={() => <Products />} />
+              <Route path="/products" render={() => <Products />} />
+              <Route path="/login" render={() => <Login />} />
+              <Route path="/basket" render={() => <Basket />} />
             </Switch>
           </MainArea>
         </Body>
