@@ -16,11 +16,20 @@ const Body = styled.div`
 const MainArea = styled.div``;
 
 class App extends Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      password:''
+    };
+  }
+
   render() {
     return (
       <Router>
         <Body>
-          <Header />
+          <Header email={this.state.email}/>
           <MainArea>
             <Switch>
               <Route exact path="/" render={() => <Products />} />
