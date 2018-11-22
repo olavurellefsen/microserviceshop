@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { ProductList, ProductEntry, ProductImage, ProductName, ProductDescription, ProductCost, ProductBitcoinAddress } from './Product.style';
-import products2 from '../data/sampleproducts';
 
 class Products extends Component {
   constructor(props) {
@@ -19,7 +18,6 @@ class Products extends Component {
 
   render() {
     const { products } = this.state;
-    console.log(products);
     return (
       <ProductList>
         {products.filter(product => product.id<10).map(product => {
