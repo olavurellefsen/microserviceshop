@@ -14,14 +14,15 @@ class Products extends Component {
   componentDidMount() {
     fetch('http://35.197.240.22/api/article')
       .then(response => response.json())
-      .then(data => this.setState({ hits: data.products }));
+      .then(data => this.setState({ products: data }));
   }
 
   render() {
-    //const { products } = this.state;
+    const { products } = this.state;
+    console.log(products);
     return (
       <ProductList>
-        {products2.filter(product => product.id<10).map(product => {
+        {products.filter(product => product.id<10).map(product => {
           const imageurl = 'https://picsum.photos/300/200?image='+(product.id+100);
           return(
             <ProductEntry key={product.id}>
