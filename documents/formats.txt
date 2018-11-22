@@ -1,0 +1,10 @@
+List:
+    ID
+    Name
+ 
+Get Articles
+    ID                  Uint
+    Name                varchar(50)
+    Description         text
+    Cost                float
+    Bitcoint_address    varchar(40)

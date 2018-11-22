@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import logo from './logo.svg';
+import Products from './Products/Products'
 import './App.css';
 
 class App extends Component {
@@ -8,19 +8,16 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route path="/products" render={() => 'Products'} />
+          <Route path="/products" render={() => <Products />} />
           <Route exact path="/" render={() =>
             <div className="App">
               <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
                 <p>
                   MicroserviceShop
                 </p>
                 <a
                   className="App-link"
                   href="/products"
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   The ultimate shopping experience
                 </a>
