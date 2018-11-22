@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ProductList = styled.div`
 `;
 
-export const ProductEntry = styled.div`
+export const ProductEntry = styled.li`
 `;
 
 export const ProductImage = styled.img`
