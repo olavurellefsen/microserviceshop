@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ProductList, ProductEntry, ProductName, ProductDescription, ProductCost, ProductBitcoinAddress } from './Product.style';
+import { ProductList, ProductEntry, ProductImage, ProductName, ProductDescription, ProductCost, ProductBitcoinAddress } from './Product.style';
 import products2 from '../data/sampleproducts';
 
 class Products extends Component {
@@ -21,13 +21,18 @@ class Products extends Component {
     //const { products } = this.state;
     return (
       <ProductList>
-        {products2.map(product =>
-          <ProductEntry key={product.id}>
-            <ProductName>{product.name}</ProductName>
-            <ProductDescription>{product.description}</ProductDescription>
-            <ProductCost>{product.cost}</ProductCost>
-            <ProductBitcoinAddress>{product.bitCoinAddress}</ProductBitcoinAddress>
-          </ProductEntry>
+        {products2.filter(product => product.id<10).map(product => {
+          const imageurl = 'https://picsum.photos/300/200?image='+(product.id+100);
+          return(
+            <ProductEntry key={product.id}>
+              <ProductName>{product.name}</ProductName>
+              <ProductImage src={imageurl} />
+              <ProductDescription>{product.description}</ProductDescription>
+              <ProductCost>DKK {product.cost}</ProductCost>
+              <ProductBitcoinAddress>Bitcoin address: {product.bitCoinAddress}</ProductBitcoinAddress>
+            </ProductEntry>
+          )
+        }
         )}
       </ProductList>
     )
