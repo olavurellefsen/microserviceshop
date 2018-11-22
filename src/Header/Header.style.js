@@ -12,7 +12,7 @@ export const StoreName = styled.a`
     color: white;
 `;
 
-export const MenuContainer = styled.a`
+export const MenuContainer = styled.div`
     padding-left: 40px;
     font-size: 24px;
     display: flex;
