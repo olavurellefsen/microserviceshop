@@ -2,11 +2,7 @@ import React, { Component } from "react";
 import {
   BasketList,
   BasketEntry,
-  BasketImage,
   BasketName,
-  BasketDescription,
-  BasketCost,
-  BasketBitcoinAddress
 } from "./Basket.style";
 
 class Basket extends Component {
