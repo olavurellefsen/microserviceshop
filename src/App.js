@@ -21,9 +21,20 @@ class App extends Component {
     super(props);
     this.state = {
       email: '',
-      password:''
+      password:'',
+      token:''
     };
   }
+
+  doLogin = (e, email, password, token) => {
+    e.preventDefault();
+    this.setState(email, email);
+    this.setState(password, password);
+    this.setState(token, token);
+    this.props.history.push('/');
+    console.log(this.state);
+  }  
+
 
   render() {
     return (
@@ -34,7 +45,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" render={() => <Products />} />
               <Route path="/products" render={() => <Products />} />
-              <Route path="/login" render={() => <Login />} />
+              <Route path="/login" render={() => <Login email={this.state.email} password={this.state.password} doLogin={this.doLogin} />} />
               <Route path="/basket" render={() => <Basket />} />
             </Switch>
           </MainArea>

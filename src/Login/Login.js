@@ -24,6 +24,9 @@ class Login extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(event.target);
+    const token = '123456789';
+    this.props.doLogin(event, data.get("uname"), data.get("psw"), token );
+
     // this.setState({ email: data.get("uname") });
     // this.setState({ password: data.get("psw") });
 
@@ -60,7 +63,7 @@ class Login extends Component {
   render() {
     return (
       <LoginBody>
-        <LoginForm action="/action_page.php">
+        <LoginForm onSubmit={this.handleSubmit}>
           <Container>
             <LoginItem>
               <LoginLabel>Username</LoginLabel>
