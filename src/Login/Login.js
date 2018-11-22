@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { LoginBody, LoginForm, LoginLabel, LoginField, LoginButton, CancelButton, Container } from './Login.style';
+import { LoginBody, LoginForm, LoginItem, LoginLabel, LoginField, LoginButton, Container } from './Login.style';
 
 class Login extends Component {
   constructor(props) {
@@ -21,13 +21,17 @@ render() {
     <LoginBody>
       <LoginForm action="/action_page.php">
           <Container>
-            <LoginLabel>Username</LoginLabel>
-            <LoginField type="text" placeholder="Enter Username" name="uname" required />
-
-            <LoginLabel>Password</LoginLabel>
-            <LoginField type="password" placeholder="Enter Password" name="psw" required />
-                
-            <LoginButton type="submit">Login</LoginButton>
+            <LoginItem>
+              <LoginLabel>Username</LoginLabel>
+              <LoginField type="text" placeholder="Enter Username" name="uname" required />
+            </LoginItem>
+            <LoginItem>
+              <LoginLabel>Password</LoginLabel>
+              <LoginField type="password" placeholder="Enter Password" name="psw" required />
+            </LoginItem>
+            <LoginItem>
+              <LoginButton type="submit">Login</LoginButton>
+            </LoginItem>
           </Container>
       </LoginForm>
     </LoginBody>

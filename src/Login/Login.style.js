@@ -6,16 +6,26 @@ export const LoginBody = styled.div`
 
 export const LoginForm = styled.div`
     border: 3px solid #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+`;
+
+export const LoginItem = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `;
 
 export const LoginLabel = styled.label`
     font-weight: bold;
+    color: white;
 `;
 
 export const LoginField = styled.input`
-    width: 100%;
+    width: 300px;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 5px 0px 20px 0px;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -28,7 +38,7 @@ export const LoginButton = styled.button`
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 300px;
     &:hover{
         opacity: 0.8;
     }
